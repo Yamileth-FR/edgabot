@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#welcome-message-container {
+    position: fixed; /* Mantener el contenedor fijo al hacer scroll */
+    top: 20px;
+    right: 20px;
+    background-color: #f9f9f96d; /* Fondo del cuadro */
+    border: 2px solid #cccccc6c; /* Borde del cuadro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del cuadro */
+    z-index: 1000; /* Asegura que el cuadro esté por encima de otros elementos */
+    display: flex;
+    align-items: center;
+}
+
+#profile-card {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Hace que el avatar sea circular */
+    margin-right: 10px;
+}
+
+#welcome-text {
+    font-size: 18px;
+    color: #0055af; /* Color llamativo para el texto de bienvenida */
+    font-weight: bold; /* Hace que el texto de bienvenida sea más llamativo */
+}
+
+#welcome-username {
+    font-size: 22px;
+    color: #333; /* Color llamativo para el nombre de usuario */
+    font-weight: bold; /* Hace que el nombre de usuario sea más llamativo */
+}

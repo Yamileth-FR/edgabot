@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdgaBot Card API</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <style>
+        body {
+            zoom: 100%;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Función para obtener los parámetros de la URL
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Obtener los valores de los parámetros
+        var nombre = getParameterByName('nombre');
+        var texto2 = getParameterByName('texto2');
+        var texto3 = getParameterByName('texto3');
+        var texto4 = getParameterByName('texto4');
+        var texto5 = getParameterByName('texto5');
+        var avatar = getParameterByName('avatar');
+        var fondo = getParameterByName('fondo');
+
+        // Crear una nueva imagen para el avatar
+        var avatarImg = new Image();
+        avatarImg.src = avatar;
+        avatarImg.onload = function() {
+            // Asegurar que la imagen del avatar se ha cargado antes de asignarla
+            document.querySelector('.user-card-img img').src = avatar;
+
+            // Después de cargar el avatar, cargar la imagen de fondo si está presente
+            if (fondo) {
+                var fondoImg = new Image();
+                fondoImg.src = fondo;
+                fondoImg.onload = function() {
+                    // Asegurar que la imagen de fondo se ha cargado antes de asignarla
+                    document.body.style.backgroundImage = 'url("' + fondo + '")';
+
+                    // Después de cargar las imágenes, realizar la captura
+                    capturePage();
+                };
+            } else {
+                // Si no hay imagen de fondo, simplemente realizar la captura
+                capturePage();
+            }
+        };
+
+        // Mostrar los valores en la página
+        document.write('<div class="wrapper">');
+        document.write('    <div class="user-card">');
+        document.write('        <div class="user-card-img">');
+        document.write('            <img src="" alt="">');
+        document.write('        </div>');
+        document.write('        <div class="user-card-info">');
+        document.write('            <h2>' + nombre + '</h2>');
+        document.write('            <p><span>Nacionalidad:</span>' + texto4 + '</p>');
+        document.write('            <p><span>Edad:</span>' + texto5 + '</p>');
+        document.write('            <p><span>Trabajo:</span>' + texto3 + '</p>');
+        document.write('            <p><span>Descripción:</span>' + texto2 + '</p>');
+        document.write('        </div>');
+        document.write('    </div>');
+        document.write('</div>');
+
+        // Función para capturar el contenido y convertirlo en una imagen
+        function capturePage() {
+            setTimeout(function() {
+                html2canvas(document.body, { scale: 1 }).then(function(canvas) {
+                    // Convertir el canvas a una imagen
+                    var imgData = canvas.toDataURL('image/png');
+
+                    // Crear un elemento de imagen y establecer su fuente como el contenido capturado
+                    var img = new Image();
+                    img.src = imgData;
+
+                    // Agregar la imagen al cuerpo de la página
+                    document.body.appendChild(img);
+                });
+            }, 1000);  // Esperar 1 segundo antes de capturar
+        }
+    </script>
+</body>
+</html>

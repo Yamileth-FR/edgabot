@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil/User</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    .profil-img {
+      background-image: url("avatar.png");
+      width: 100px;
+      height: 100px;
+      background-size: cover;
+      border-radius: 50%;
+      border: 0.1em solid #eb2d53;
+      margin: auto;
+      margin-top: 30px;
+      box-shadow: inset 0px 0px 0px 5px white;
+    }
+  </style>
+
+<link id="favicon" rel="icon" href="default-icon.png">
+</head>
+<body>
+<div class="container">
+  <div class="all flex-row">
+    <div class="menu flex-column">
+      <div class="flex-row label-wrapper">
+        <img src="https://cdn.discordapp.com/icons/923341410760028160/4a15c4fd59ec0a55ebe84d021b0d8951.png?size=2048" />
+        <h3 class="insta-writing">Akiomae Crement</h3>
+      </div>
+      <div class="profil-img"></div>
+      <div class="profil-info">
+        <h2 class="name"><!--TEXTO1--></h2>
+        <h3 class="trabajo"><!--TEXTO2--></h3>
+        <div class="numbers">
+          <div class="post">
+            <p>Dinero</p>
+            <div class="post-num1"><!--TEXTO3--></div>
+          </div>
+          <div class="post">
+            <p>Edad</p>
+            <div class="post-num2"><!--TEXTO4--></div>
+          </div>
+          <div class="post">
+            <p>Nación</p>
+            <div class="post-num3"><!--TEXTO5--></div>
+          </div>
+        </div>
+      </div>
+      <div class="read-me">
+        <!--TEXTO6-->
+      </div>
+    </div>
+  </div>
+
+  <hr class="hr-new">
+  <div class="right-of-page">
+    <div class="right-middle">
+      <div class="featured">
+        <div class="featured-header">
+          <div class="icon-two">
+            <div class="read-me"></div>
+          </div>
+        </div>
+        <div class="featured-body">
+          <div class="galery-wrapper">
+            <div class="img-galery1">
+              <img src="<!--img1-->" />
+            </div>
+            <div class="img-galery2">
+              <img src="<!--img2-->" />
+            </div>
+            <div class="img-galery3">
+              <img src="<!--img3-->" />
+            </div>
+          </div>
+        </div>
+
+        <div class="last-body">
+          <div class="galery-wrapper">
+            <div class="img-galery4">
+              <img src="<!--img4-->" />
+            </div>
+            <div class="img-galery5">
+              <img src="<!--img5-->" />
+            </div>
+            <div class="img-galery6">
+              <img src="<!--img6-->" />
+            </div>
+          </div>
+        </div>
+        <div class="loader"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Función para obtener parámetros de la URL
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  // Obtener parámetros de la URL
+  var texto1 = getParameterByName('texto1');
+  var texto2 = getParameterByName('texto2');
+  var texto3 = getParameterByName('texto3');
+  var texto4 = getParameterByName('texto4');
+  var texto5 = getParameterByName('texto5');
+  var texto6 = getParameterByName('texto6');
+  var avatar = getParameterByName('avatar');
+  var img1 = getParameterByName('img1');
+  var img2 = getParameterByName('img2');
+  var img3 = getParameterByName('img3');
+  var img4 = getParameterByName('img4');
+  var img5 = getParameterByName('img5');
+  var img6 = getParameterByName('img6');
+
+  // Actualizar contenido con los parámetros
+  document.querySelector('.name').textContent = texto1 || 'Usuario';
+  document.querySelector('.trabajo').textContent = texto2 || 'Trabajo';
+  document.querySelector('.post-num1').textContent = texto3 || '100';
+  document.querySelector('.post-num2').textContent = texto4 || 'Texto por defecto';
+  document.querySelector('.post-num3').textContent = texto5 || 'Texto por defecto';
+  document.querySelector('.read-me').textContent = texto6 || 'Descripción por defecto...';
+
+  // Actualizar imágenes con los parámetros
+  document.querySelector('.profil-img').style.backgroundImage = 'url("' + (avatar || 'avatar.png') + '")';
+  document.querySelector('.img-galery1 img').src = img1 || 'https://images.unsplash.com/photo-1426543881949-cbd9a76740a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60';
+  document.querySelector('.img-galery2 img').src = img2 || 'https://images.unsplash.com/photo-1532347922424-c652d9b7208e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60';
+  document.querySelector('.img-galery3 img').src = img3 || 'https://images.unsplash.com/photo-1414609245224-afa02bfb3fda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60';
+  document.querySelector('.img-galery4 img').src = img4 || 'https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60';
+  document.querySelector('.img-galery5 img').src = img5 || 'https://images.unsplash.com/photo-1527212986666-4d2d47a80d5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60';
+  document.querySelector('.img-galery6 img').src = img6 || 'https://images.unsplash.com/photo-1505158498176-0150297fbd7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60';
+  if (avatar) {
+      var faviconLink = document.getElementById('favicon');
+      faviconLink.href = avatar;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>EdgaBot</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css'><link rel="stylesheet" href="./index.css"><link rel="stylesheet" href="perfil.css">
+  <link rel="icon" href="img/avatar.png">
+
+<meta name="description" content="EdgaBot un Bot multifunciones para tu servidor, cuenta con comandos de moderación y automoderación para mantener seguro tu servidor.">
+<meta property="og:site_name" content="EdgaBot web page">
+<meta property="og:url" content="https://edgabot.akiomae.com/">
+<meta name="title" content="EdgaBot">
+<meta name="description" content="EdgaBot un Bot multifunciones para tu servidor, cuenta con comandos de moderación y automoderación para mantener seguro tu servidor.">
+<meta name="keywords" content="Bot de Discord">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Spanish">
+<meta property="og:image" content="https://cdn.discordapp.com/attachments/1082362707468099665/1143772814311178330/Polish_20230203_155318393.png">
+<meta property="og:image:width" content="720">
+<meta property="og:image:height" content="720">
+<meta property="og:image:type" content="image/png">
+
+</head>
+<style>
+  @keyframes floating {
+      0% {
+          transform: translateY(0px) rotate(0deg);
+      }
+      50% {
+          transform: translateY(-10px) rotate(-1deg);
+      }
+      100% {
+          transform: translateY(0px) rotate(0deg);
+      }
+  }
+
+  #avatar-container {
+      animation: floating 3s ease-in-out infinite;
+      margin-top: 50px;
+      margin-left: 600px;
+  }
+
+  #avatar {
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    #avatar-container:hover #avatar {
+      transform: scale(1.1);
+    }
+
+h1 {
+      display: inline-block;
+      position: relative;
+    }
+
+#imgee {
+      position: absolute;
+      height: 1em;
+      margin-left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .welcome-message {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    #user-avatar {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+    }
+
+</style>
+<body>
+    <section>
+      <div>
+        <nav class="navbar">
+          <div class="container">
+            <ul class="nav-links">
+              <li><a href="https://edgabot.akiomae.com/">Inicio</a></li>
+              <li><a href="./pages/commands.html">Comandos</a></li>
+              <li><a href="/api">API</a></li>
+              <li><a href="./pages/socios.html">Socios</a></li>
+              <li><a href="servers.html">Patners</a></li>
+              <li><a href="/status">Status</a></li>
+            </ul>
+          </div>
+        </nav>        
+    </div>
+      <div class="outer">
+        <div class="inner">
+          <div class="bg home">
+            <div class="scroll">
+              <p>Akiomae</p>
+              <p>Crement</p>
+            </div>
+            
+            <div id="welcome-message-container" class="welcome-message" style="display:none;">
+              <div id="profile-card">
+                  <img id="user-avatar" src="" alt="Avatar" class="avatar">
+                  <div id="welcome-text">
+                      Bienvenid@, <span id="welcome-username"></span>!
+                  </div>
+              </div>
+          </div>
+
+          <div id="avatar-container">
+            <img id="avatar" src="img/avatar.png" alt="EdgaBot OC" width="530" height="710"/>
+          </div>
+            <div class="home-content">
+              <h1>EdgaBot <img id="imgee" src="https://catch-it-bot.com/static/media/bot.b5ac1e4b41a352a99088.webp" alt="Imagen" /></h1>
+              <p>
+                El equipo de desarrollo, Akiomae CreMent presentan a uno de sus mejores bots de moderación e interacción.
+              </p>
+              <ul class="links">
+                <li>
+                  <a href="https://discord.com/oauth2/authorize?client_id=1052036415678074941"
+                    ><h1>Invitar </h1></a>
+                </li>
+                <li>
+                  <a href="./AkioUsers"
+                    ><h1>Login </h1></a>
+                </li>
+                <li>
+                  <a href="https://e.widgetbot.io/channels/923341410760028160/1056375272263385108"
+                    ><h1>Soporte </h1></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <img class="mouse-move" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/28313e5d-95f1-4e38-ac49-16b4cf006014" alt="" />
+    </section>
+
+    <section>
+      <div class="outer">
+        <div class="inner">
+          <div class="bg content">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="title">
+                    <h2>Facil de Usar</h2>
+                    <p>Aprender a usar a EdgaBot es muy sencillo y practico, no necesitas saberes previos de algun tipo ya que el Bot
+                      te ayudara con aquellas dudas, si necesitas mas ayuda puedes unirte al servidor de soporte.</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="title">
+                    <h2>Atualizaciones</h2>
+                    <p>EdgaBot esta especialmente diseñado para obtener las respuestas mas rapidas y precisas, con multiples 
+                      actualizaciones de nuevos comandos y sistemas para una mejor experiencia de usuario.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="title">
+                    <h2>Tecnología</h2>
+                    <p>Este Bot te ofrece multiples comandos y subcomandos de interacción, moderación, inteligencia artificial y minijuegos; 
+                      utiliza diferentes APIs que te hacen de tu servidor un lugar mejor y agradable.</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="Edgajuman.png" alt="Edgajuman" />
+                  <div class="title">
+                    <h2>Edgajuman</h2>
+                    <p>Ceo de Akiomae crement</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="Yamileth.webp" alt="Yamileth" />
+                  <div class="title">
+                    <h2>Yamileth</h2>
+                    <p>Ceo de Akiomae crement</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="Not_staff.png" alt="Not_staff" />
+                  <div class="title">
+                    <h2>Not_staff</h2>
+                    <p>Developer / Staff</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="MigMatos.png" alt="MigMatos" />
+                  <div class="title">
+                    <h2>MigMatos</h2>
+                    <p>Developer / Tester</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="Nia.jpg" alt="Nia" />
+                  <div class="title">
+                    <h2>Nia</h2>
+                    <p>Staff / Developer</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="Thiago.jpg" alt="Thiago" />
+                  <div class="title">
+                    <h2>Thiago</h2>
+                    <p>Staff / Tester</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="Beartvgames.gif" alt="Beartvgames" />
+                  <div class="title">
+                    <h2>Beartvgames</h2>
+                    <p>Tester</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="outer">
+        <div class="inner">
+          <div class="bg info">
+            <img src="https://edgabot.akiomae.com/crement.png" alt="" />
+            <div class="info-content">
+              <h1>Terminos y Condiciones</h1>
+              <p>Al invitar a EdgaBot a tu servidor de Discord, aceptas sus términos y condiciones, 
+                así como su política de privacidad. El uso de EdgaBot es gratuito y 
+                cualquier intento de cobro debe ser comunicado. No se permite utilizar 
+                los comandos del bot para dañarlo o perjudicar a otros servidores. 
+                EdgaBot ofrece APIs para mantener una buena convivencia y no puede ser 
+                vendido o comercializado en otras plataformas. Se deben respetar las normas 
+                de convivencia y no está permitido el spam ni el uso simultáneo de varios comandos. 
+                EdgaBot solo recopila información limitada de los usuarios y se pueden utilizar 
+                subcomandos en mensajes directos para mayor privacidad.</p>
+              <div class="tag-container">
+                <span>Akiomae crement</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  fetch('get-user.php')
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.username) {
+        document.getElementById('welcome-message-container').style.display = 'block';
+        document.getElementById('welcome-username').textContent = data.username;
+        document.getElementById('user-avatar').src = data.avatar;
+      } else {
+        console.log('No se encontró el usuario.');
+      }
+    })
+    .catch(error => {
+      console.error('Error al obtener los datos del usuario:', error);
+    });
+});
+  </script>
+<!-- partial -->
+
+  <script src='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js'></script>
+<script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'></script>
+<script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'></script>
+<script src='https://assets.codepen.io/16327/gsap-latest-beta.min.js'></script>
+<script src='https://assets.codepen.io/16327/Observer.min.js'></script>
+<script  src="./inde.js"></script>
+</body>
+</html>
